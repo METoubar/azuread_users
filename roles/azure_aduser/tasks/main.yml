@@ -1,0 +1,17 @@
+---
+# tasks file for azure_aduser
+- name: Ping Targets
+  ping:
+
+- name: Create user
+  azure_rm_aduser:
+    user_principal_name: "{{ user_id }}"
+    tenant: "{{ tenant_id }}"
+    state: "present"
+    account_enabled: "True"
+    display_name: "Test_{{ user_principal_name }}_Display_Name"
+    mail_nickname: "Test_{{ user_principal_name }}_mail_nickname"
+    given_name: "Mohamed"
+    surname: "Metwally"
+    user_type: "Member"
+    mail: "{{ user_principal_name }}@gmail.com"

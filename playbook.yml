@@ -1,0 +1,6 @@
+---
+- name: Create, delete, and update an Azure Active Directory user
+  hosts: localhost
+  become: true
+  roles:
+    - azure_aduser
