@@ -1,6 +1,6 @@
 # tasks file for azure_aduser
 - name: create user
-  azure.azcollection.azure_rm_aduser:
+  azure_rm_aduser:
     user_principal_name: "{{ user_id }}"
     tenant: "{{ tenant_id }}"
     state: "present"
