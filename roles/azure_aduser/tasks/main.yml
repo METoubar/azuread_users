@@ -1,9 +1,5 @@
----
 # tasks file for azure_aduser
-- name: Ping Targets
-  ping:
-
-- name: Create user
+- name: create user
   azure_rm_aduser:
     user_principal_name: "{{ user_id }}"
     tenant: "{{ tenant_id }}"
